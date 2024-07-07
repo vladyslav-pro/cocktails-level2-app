@@ -23,8 +23,10 @@ export class CocktailComponent implements OnInit {
     this.cocktailType = this.cocktail()?.isAlcoholic ? 'Alcoholic' : 'Non-alcoholic';
   }
 
-  changeFavoriteState(id: string) {
-    this.cocktailService.changeFavoriteState(id);
+  changeFavoriteState(id: string | undefined) {
+    if (id) {
+      this.cocktailService.changeFavoriteState(id);
+    }
   }
 
   returnToCocktails() {

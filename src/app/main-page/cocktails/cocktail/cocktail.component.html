@@ -6,11 +6,9 @@
     <img [src]="cocktail()?.imageUrl" [alt]="cocktail()?.name">
   </div>
   <div class="cocktail__description">
-    <div class="cocktail__description__title">
+    <div class="cocktail__description__title main-style">
       <h2>{{ cocktail()?.name }}  </h2>
-      @if (cocktail()?.favorite) {
-        ping
-      }
+      <span [class]="cocktail()?.favorite ? 'icon-star icon-state' : 'icon-star'" (click)="changeFavoriteState(cocktail()?.id)"></span>
     </div>
 
     <div class="cocktail__description__type main-style">

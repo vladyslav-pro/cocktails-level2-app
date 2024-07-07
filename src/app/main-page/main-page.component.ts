@@ -1,7 +1,7 @@
-import {Component, inject, OnInit} from "@angular/core";
-import {RouterOutlet} from "@angular/router";
-import {TitleCasePipe} from "@angular/common";
-import {LoginService} from "../shared/login.service";
+import {Component, inject, OnInit} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
+import {TitleCasePipe} from '@angular/common';
+import {LoginService} from '../shared/login.service';
 
 @Component({
   selector: 'app-main-page',

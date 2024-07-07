@@ -9,7 +9,7 @@
   <div class="cocktail-item__description">
     <div class="cocktail-item__header">
       <h3 (click)="selectedCocktail(cocktail().id)">{{ cocktail().name}}</h3>
-      <span class="icon-star" (click)="changeFavoriteState(cocktail().id)"></span>
+      <span [class]="cocktail().favorite ? 'icon-star icon-state' : 'icon-star'" (click)="changeFavoriteState(cocktail().id)"></span>
     </div>
 
     @if (cocktail().isAlcoholic) {

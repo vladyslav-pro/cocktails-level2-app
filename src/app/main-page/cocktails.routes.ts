@@ -1,6 +1,6 @@
 import {Routes} from "@angular/router";
 import {CocktailsComponent} from "./cocktails/cocktails.component";
-import {CocktailComponent} from "./cocktails/cocktail/cocktail.component";
+import {CocktailComponent} from './cocktails/cocktail/cocktail.component';
 
 export const cocktailsRoutes: Routes = [
   {

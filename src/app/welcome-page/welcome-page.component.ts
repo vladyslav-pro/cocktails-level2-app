@@ -1,8 +1,8 @@
 import {Component, inject} from '@angular/core';
-import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
-import {LoginService} from "../shared/login.service";
-import {MatAnchor, MatButton} from "@angular/material/button";
-import {Router, RouterLink} from "@angular/router";
+import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
+import {LoginService} from '../shared/login.service';
+import {MatAnchor} from '@angular/material/button';
+import {Router, RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-welcome-page',

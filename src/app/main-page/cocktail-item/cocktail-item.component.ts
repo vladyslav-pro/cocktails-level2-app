@@ -1,7 +1,7 @@
 import { Component, input } from '@angular/core';
-import {CocktailModel} from "../../shared/cocktail.model";
-import {ReplacePipe} from "../../shared/replace.pipe";
-import {TitleCasePipe} from "@angular/common";
+import { CocktailModel } from '../../shared/cocktail.model';
+import { ReplacePipe } from '../../shared/replace.pipe';
+import { TitleCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-cocktail-item',

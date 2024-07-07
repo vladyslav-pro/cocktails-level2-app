@@ -1,11 +1,10 @@
-import {Component, DestroyRef, inject, OnChanges, OnInit, SimpleChanges} from '@angular/core';
-import {LoginService} from "../shared/login.service";
-import {TitleCasePipe} from "@angular/common";
-import {CocktailModel} from "../shared/cocktail.model";
-import {CocktailService} from "../shared/cocktail.service";
-import {FormsModule} from "@angular/forms";
-import {CocktailItemComponent} from "./cocktail-item/cocktail-item.component";
-import {SearchPipe} from "../shared/search.pipe";
+import {Component, DestroyRef, inject, OnInit, } from '@angular/core';
+import { LoginService } from '../shared/login.service';
+import { TitleCasePipe } from '@angular/common';
+import { CocktailService } from '../shared/cocktail.service';
+import { FormsModule } from '@angular/forms';
+import { CocktailItemComponent } from './cocktail-item/cocktail-item.component';
+import { SearchPipe } from '../shared/search.pipe';
 
 @Component({
   selector: 'app-cocktails',

@@ -1,9 +1,5 @@
-<header>
-  <h1>Welcome to cocktail application dear {{ userName | titlecase }}</h1>
-</header>
-<main >
+<div>
   <h4>Find your cocktail</h4>
-
   <div>
     <label for="filteringCocktail">Filter</label>
     <input
@@ -11,14 +7,13 @@
       type="text"
       placeholder="search cocktail"
       [(ngModel)]="cocktailName"
-      />
+    />
   </div>
   <div class="cocktail-list">
-      @for (cocktail of cocktails() | search: cocktailName; track cocktail.id) {
-        <app-cocktail-item [cocktail]="cocktail"/>
-      }
+    @for (cocktail of cocktails() | search: cocktailName; track cocktail.id) {
+      <app-cocktail-item [cocktail]="cocktail"/>
+    }
   </div>
+</div>
 
 
-
-</main>

@@ -1,0 +1,50 @@
+button {
+  border-radius: 10px;
+}
+.cocktail {
+  display: flex;
+  justify-content: center;
+  background-color: #a5bcd7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cocktail__image {
+  img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.main-style {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 500px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.alcoholic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #0754ab;
+  width: 100px;
+  height: 20px;
+  border-radius: 10px;
+}
+
+.non-alcoholic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #3caf7b;
+  width: 150px;
+  height: 20px;
+  border-radius: 10px;
+}
+

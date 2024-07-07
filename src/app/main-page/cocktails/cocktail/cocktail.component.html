@@ -1,0 +1,37 @@
+<button (click)="returnToCocktails()">
+  Return to all cocktails
+</button>
+<div class="cocktail">
+  <div class="cocktail__image">
+    <img [src]="cocktail()?.imageUrl" [alt]="cocktail()?.name">
+  </div>
+  <div class="cocktail__description">
+    <div class="cocktail__description__title">
+      <h2>{{ cocktail()?.name }}  </h2>
+      @if (cocktail()?.favorite) {
+        ping
+      }
+    </div>
+
+    <div class="cocktail__description__type main-style">
+      <h5>type</h5>
+      <span [class]="cocktail()?.isAlcoholic ? 'alcoholic' : 'non-alcoholic'">{{cocktailType }}</span>
+    </div>
+    <div class="cocktail__description__ingredients main-style">
+      <h5>ingredients</h5>
+      <div>
+        <ul>
+          @for (item of cocktail()?.ingredients; track $index) {
+            <li>{{ item }}</li>
+          }
+        </ul>
+
+      </div>
+    </div>
+    <div class="cocktail__description__instruction main-style">
+      <h5>instruction</h5>
+      <span>{{ cocktail()?.instructions}}</span>
+    </div>
+  </div>
+
+</div>

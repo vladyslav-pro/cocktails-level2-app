@@ -4,12 +4,12 @@
         <img [src]="cocktail().imageUrl" [alt]="cocktail().name">
     </div>
   } @placeholder {
-    <span></span>
+    <span>here will be image</span>
   }
   <div class="cocktail-item__description">
     <div class="cocktail-item__header">
-      <h3>{{ cocktail().name}}</h3>
-      <span class="icon-star" (click)="onSelectFavorite(cocktail().id)"></span>
+      <h3 (click)="selectedCocktail(cocktail().id)">{{ cocktail().name}}</h3>
+      <span class="icon-star" (click)="changeFavoriteState(cocktail().id)"></span>
     </div>
 
     @if (cocktail().isAlcoholic) {

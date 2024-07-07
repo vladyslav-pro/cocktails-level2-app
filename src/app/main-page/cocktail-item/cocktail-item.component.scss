@@ -1,0 +1,54 @@
+.cocktail-item {
+  width: 500px;
+  height: 200px;
+  border: 1px solid dimgrey;
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+}
+
+.cocktail-item__image {
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px 0 0 10px;
+  }
+}
+
+.cocktail-item__description {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 200px;
+  padding: 10px 10px 0 10px;
+}
+
+.cocktail-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.icon-star:active {
+    color: #f1e56e;
+}
+
+
+.cocktail-item__description__alcohol {
+  display: flex;
+  justify-content:center;
+  width: 100px;
+  border-radius: 15px;
+  color: white;
+  background-color: #0754ab;
+}
+
+.cocktail-item__description__without {
+  display: flex;
+  justify-content:center;
+  width: 120px;
+  border-radius: 15px;
+  color: white;
+  background-color: #308d58;
+}

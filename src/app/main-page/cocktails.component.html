@@ -1,4 +1,23 @@
 <header>
-  <h1>Welcome to cocktail application dear {{userName}}</h1>
-
+  <h1>Welcome to cocktail application dear {{ userName | titlecase }}</h1>
 </header>
+<main >
+  <h4>Find your cocktail</h4>
+
+  <div>
+    <label for="filteringCocktail">Filter</label>
+    <input
+      id="filteringCocktail"
+      type="text"
+      placeholder="search cocktail"
+      [(ngModel)]="cocktailName"
+      (input)="filteredCocktails()"/>
+  </div>
+  <ul>
+    @for (cocktail of cocktails(); track cocktail.id) {
+        <app-cocktail-item [cocktail]="cocktail"/>
+    }
+  </ul>
+
+
+</main>

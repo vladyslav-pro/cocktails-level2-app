@@ -1,0 +1,24 @@
+<div class="cocktail-item">
+  @defer ( on viewport ) {
+    <div class="cocktail-item__image">
+        <img [src]="cocktail().imageUrl" [alt]="cocktail().name">
+    </div>
+  } @placeholder {
+    <span></span>
+  }
+  <div class="cocktail-item__description">
+    <div class="cocktail-item__header">
+      <h3>{{ cocktail().name}}</h3>
+      <span class="icon-star" (click)="onSelectFavorite(cocktail().id)"></span>
+    </div>
+
+    @if (cocktail().isAlcoholic) {
+      <span class="cocktail-item__description__alcohol">Alcoholic</span>
+    } @else {
+      <span class="cocktail-item__description__without">Non-alcoholic</span>
+    }
+    @for (ingredient of cocktail().ingredients | replace; track $index ) {
+      {{ ingredient | titlecase }}
+    }
+  </div>
+</div>

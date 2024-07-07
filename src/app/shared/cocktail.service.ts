@@ -1,4 +1,4 @@
-import {inject, Injectable, signal} from '@angular/core';
+import {inject, Injectable, signal, WritableSignal} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {map} from "rxjs";
 import {CocktailModel} from "./cocktail.model";
@@ -9,24 +9,23 @@ import {CocktailModel} from "./cocktail.model";
 export class CocktailService {
   private http = inject(HttpClient);
   private cocktails = signal<CocktailModel[]>([]);
+  private cocktailsData = signal<CocktailModel[]>([]);
 
-  cocktailsData = this.cocktails.asReadonly();
+  cocktailsList = this.cocktailsData.asReadonly();
 
   constructor() { }
 
   getCocktails() {
     return this.http.get<CocktailModel[]>('/cocktails').pipe(
       map( (data: CocktailModel[]) => {
-        this.cocktails.set(data);
-        // return data
+        this.cocktailsData.set(data);
       })
     );
   }
 
+
   changeFavoriteState(id: string) {
 
   }
-
-
 
 }

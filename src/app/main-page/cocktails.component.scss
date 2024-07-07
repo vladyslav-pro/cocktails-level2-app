@@ -6,3 +6,9 @@ input {
   border: 2px solid #7ea2cb;
   border-radius: 5px;
 }
+
+.cocktail-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1100px;
+}

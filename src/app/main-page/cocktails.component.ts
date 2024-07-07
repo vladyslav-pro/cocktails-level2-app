@@ -5,6 +5,7 @@ import {CocktailModel} from "../shared/cocktail.model";
 import {CocktailService} from "../shared/cocktail.service";
 import {FormsModule} from "@angular/forms";
 import {CocktailItemComponent} from "./cocktail-item/cocktail-item.component";
+import {SearchPipe} from "../shared/search.pipe";
 
 @Component({
   selector: 'app-cocktails',
@@ -12,7 +13,8 @@ import {CocktailItemComponent} from "./cocktail-item/cocktail-item.component";
   imports: [
     TitleCasePipe,
     FormsModule,
-    CocktailItemComponent
+    CocktailItemComponent,
+    SearchPipe
   ],
   templateUrl: './cocktails.component.html',
   styleUrl: './cocktails.component.scss'
@@ -25,7 +27,7 @@ export class CocktailsComponent implements OnInit {
   userName: string = '';
   cocktailName: string = '';
 
-  cocktails = this.cocktailService.cocktailsData
+  cocktails = this.cocktailService.cocktailsList;
 
   ngOnInit() {
     this.userName = this.loginService.getUserName;
@@ -35,8 +37,5 @@ export class CocktailsComponent implements OnInit {
     })
   }
 
-  filteredCocktails() {
-    console.log(this.cocktailName);
-  }
 
 }

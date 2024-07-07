@@ -11,13 +11,14 @@
       type="text"
       placeholder="search cocktail"
       [(ngModel)]="cocktailName"
-      (input)="filteredCocktails()"/>
+      />
   </div>
-  <ul>
-    @for (cocktail of cocktails(); track cocktail.id) {
+  <div class="cocktail-list">
+      @for (cocktail of cocktails() | search: cocktailName; track cocktail.id) {
         <app-cocktail-item [cocktail]="cocktail"/>
-    }
-  </ul>
+      }
+  </div>
+
 
 
 </main>

@@ -43,10 +43,15 @@ export class CocktailService {
       return cocktails;
       }
     )
+    this.saveCocktails();
   }
 
   selectCocktail(id: string) {
     this.selectedCocktail.set(this.cocktailsData().find( c => c.id === id));
+  }
+
+  private saveCocktails() {
+    localStorage.setItem('cocktails', JSON.stringify(this.cocktailsData()));
   }
 
 }
